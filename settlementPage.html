@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品结算页</title>
+    <link rel="stylesheet" href="settlementPage.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="citys.js">
+</head>
+
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <div class="page-head">
+            <div class="top">
+                <div class="type-area">
+                    <div class="leftbox">
+                        <i class="iconfont icon-fangzi"></i>
+                        欢迎进入花仙网鲜花店，同城订花1-3H送花上门，100%新鲜花材，市区免运费配送！</div>
+                    <div class="rightbox">
+                        <a href="" title="订单查询" rel="">
+                            <span>订单查询</span>|
+
+                        </a>
+                        <a href="" title="购物车" rel="">
+                            <span>
+                                <i class="iconfont icon-gouwuchekong"></i>
+                                购物车</span>|
+
+                        </a>
+                        <a href="" title="在线客服" rel="">
+                            <span>
+                                <i class="iconfont icon-kefu"></i>
+                                在线客服</span>|
+
+                        </a>
+                        <a href="" title="收藏本站" rel="">
+                            <span>收藏本站</span>|
+
+                        </a>
+                        <a href="" title="个人中心" rel="">
+                            <span>
+                                <i class="iconfont icon-tubiaozhizuomoban"></i>
+                                个人中心</span>
+                    </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="middle">
+                <div class="type-area">
+                    <div class="logo">
+                        <img src="images/head_logo.png" alt="">
+                    </div>
+                    <div class="serch">
+                        <form action="">
+                            <input type="text" placeholder="请输入搜索关键词">
+                            <button class="submit">
+                                <i class="iconfont icon-chazhao"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="cart">
+                        <a href="shoppingCart.html">
+                            <i class="iconfont icon-gouwuchekong"></i>
+                            购物车>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="manue">
+                <div class="type-area">
+                    <ul class="nav">
+                        <li class="all">
+                            <i class="iconfont icon-sheshileibiedingyi"></i>
+                            <a href="" title="">全部商品分类</a>
+                        </li>
+                        <li>
+                            <a href="homePage.html" title="">首页</a>
+                        </li>
+                        <li>
+                            <a href="flowerList.html" title="">爱情鲜花
+                                <span class="hot"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="">生日祝福</a>
+                        </li>
+                        <li>
+                            <a href="" title="">问候长辈</a>
+                        </li>
+                        <li>
+                            <a href="" title="">开业花篮</a>
+                        </li>
+                        <li>
+                            <a href="" title="">会议桌花</a>
+                        </li>
+                        <li>
+                            <a href="" title="">玫瑰专区
+                                <span class="hot"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 页面中间部分 -->
+    <section>
+        <div class="order-layout">
+            <form action="javascript">
+                <div class="order-send">
+                    <table class="table  table-order">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th align="left">
+                                    收货人信息
+                                    <span class="red">(必填)</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="120" align="right">
+                                    收货人姓名：
+                                </td>
+                                <td>
+                                    <input id="consignee" type="text" class="input-order" name="consignee" size="30" placeholder="请填写收货人的姓名">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    收货人手机：
+                                </td>
+                                <td>
+                                    <input id="mobile" type="text" class="input-order" name="mobile" size="30" placeholder="请填写收货人的手机号">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    收货人地区：
+                                </td>
+                                <td>
+                                   <select id="province" name="province" class="select-order"></select>
+                                   <select id="city" name="city" class="select-order"></select>
+                                   <select id="area" name="area" class="select-order"></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    详细街道地址：
+                                </td>
+                                <td>
+                                    <input type="text" class="input-order" name="address" size="60" placeholder="街道、小区、门牌号等">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="order-hr"></div>
+                    <table class="table table-order">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th align="left">送达时间
+                                    <span class="red">(必选)</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="120" align="right">选择送达时间：</td>
+                                <td>
+                                    <input name="best_time" id="best_time" class="input-order" placeholder="请输入送达时间">
+                                    <div class="delivery-time">
+                                        <span class="red">不限时段</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">贺卡留言/备注：</td>
+                                <td>
+                                    <textarea class="textarea-order" name="card_message" id="" cols="57" rows="3" placeholder="如需写贺卡或其他备注留言请再次填写..." maxlength="80"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="order-hr"></div>
+                    <table class="table  table-order">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th align="left"> 
+                                    订购人信息
+                                    <span>(必填)</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="120" align="right">订购人姓名：</td>
+                                <td>
+                                    <input type="text" name="do_name" id="do_name" class="input-order" size="30" placeholder="请填写认购人姓名">
+                                    <a class="copy-btn" href="javascript">使用收货人姓名</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="120" align="right">订购人手机号：</td>
+                                <td>
+                                    <input type="text" name="do_name" id="do_name" class="input-order" size="30" placeholder="请填写认购人手机号">
+                                    <a class="copy-btn" href="javascript">使用收货人手机号</a>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="red">温馨提示：</span>
+                                    订购人信息建议填写您的姓名和手机，以便配送中有什么情况可以及时与您联系！
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="order-hr"></div>
+                    <table class="table table-order">
+                        <tbody>
+                            <tr>
+                                <td width="120"></td>
+                                <td>
+                                    <input class="btn btn-red" type="submit" value="确认无误，提交订单" >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="order-hr"></div>
+                    <table class="table  table-order">
+                        <tbody>
+                            <tr>
+                                <th width="120"></th>
+                                <th align="left"订单商品></th>
+                            </tr>
+                            <tr>
+                                <td style="padding-right:10px" align="right">
+                                    <img src="images/668_thumb_G_1548962349241.jpg" width="60" height="60" alt="">
+                                </td>
+                                <td>
+                                    <p>
+                                        一生相恋-11朵红玫瑰，搭配满天星  x 
+                                        <b class="red">1</b> 件 =
+                                        <b class="red">￥169.00</b>
+                                    </p>
+                                    <p class="orange">配送：本地实体店送货上门</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="f16">
+                                    金额合计：
+                                    <b class="red">￥169.00</b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- 页面底部 -->
+    <footer>
+            <div class="page-footer">
+                <div class="type-area">
+                    <div class="bottom-odds">
+                        <dl>
+                            <dt>
+                                <i class="iconfont icon-huoche"></i>
+                            </dt>
+                            <dd>
+                                <strong>送花上门</strong>
+                                <p>专人专车送货上门</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <i class="iconfont icon-huahuaduoqingxin"></i>
+                            </dt>
+                            <dd>
+                                <strong>新鲜花材</strong>
+                                <p>采用A级新鲜花材</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <i class="iconfont icon-fulmination"></i>
+                            </dt>
+                            <dd>
+                                <strong>闪速送达</strong>
+                                <p>最快40分钟送货上门</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <i class="iconfont icon-dianpu"></i>
+                            </dt>
+                            <dd>
+                                <strong>实体花店</strong>
+                                <p>全国千家实体门店</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <i class="iconfont icon-iconfontzhizuobiaozhun33"></i>
+                            </dt>
+                            <dd>
+                                <strong>退赔保障</strong>
+                                <p>花材质量问题包退包换</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="bottom-about">
+                        <div class="bottom-about-left">
+                            <img src="images/head_logo.png" alt="">
+                        </div>
+                        <div class="bottom-about-center">
+                            <dl>
+                                <dt>新手指南</dt>
+                                <dd>
+                                    <a href="">购物流程</a>
+                                </dd>
+                                <dd>
+                                    <a href="">支付方式</a>
+                                </dd>
+                                <dd>
+                                    <a href="">订单查询</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>物流配送</dt>
+                                <dd>
+                                    <a href="">配送范围</a>
+                                </dd>
+                                <dd>
+                                    <a href="">配送说明</a>
+                                </dd>
+                                <dd>
+                                    <a href="">运费说明</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>售后服务</dt>
+                                <dd>
+                                    <a href="">售后政策</a>
+                                </dd>
+                                <dd>
+                                    <a href="">退货流程</a>
+                                </dd>
+                                <dd>
+                                    <a href="">联系客服</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>关于我们</dt>
+                                <dd>
+                                    <a href="">关于我们</a>
+                                </dd>
+                                <dd>
+                                    <a href="">花店入住</a>
+                                </dd>
+                                <dd>
+                                    <a href="">隐私保护</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="bottom-about-rigth">
+                            <img src="images/ihuaxian_wechat.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-copy">
+                    <div class="type-area">
+                        <p>
+                            <a href="">花仙网</a>-
+                            <a href="">手机版</a>-
+                            <a href="">网站导航</a>
+                        </p>
+                        <p>
+                            &copy;2021 花仙网版权所有 未经允许禁止建立镜像
+                            <a href="">滇ICP备15006224号</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <script src="machine.js"></script>
+    <script src="citys.js"></script>
+    <script>
+                let cityPicker ={
+                     province: $("#province"),
+                     city: $("#city"),
+                     area: $("#area"),
+                      // 更新城市数据
+                    
+                    // 封装函数
+                    updateCity(index){
+                        var index = index || 0;
+                        this.city.innerHTML = "";
+                        citys[index].mallCityList.forEach(item=>{
+                            let option = document.createElement("option")
+                            option.innerHTML=item.cityName;
+                            this.city.appendChild(option)
+                        })
+                    },
+                    
+                    // 更新区数据
+                    updateArea (provinceIndex,cityindex){
+                        area.innerHTML = "";
+                        citys[provinceIndex].mallCityList[cityindex].mallAreaList.forEach(item=>{
+                            let option = document.createElement("option");
+                            option.innerHTML=item.areaName;
+                            area.appendChild(option)
+                        })
+                    },
+                    init(){
+                        // 初始化省份数据
+                        citys.forEach(item =>{
+                            let option = document.createElement("option")
+                            option.innerHTML=item.provinceName;
+                            this.province.appendChild(option)
+                        });
+                        // console.log(option)
+                        this.updateCity(0)
+                        this.updateArea(0,0)
+                        // 监听省份的onchange事件
+                        this.province.onchange =()=>{
+                        this.updateCity(this.province.selectedIndex);
+                        this.updateArea(this.province.selectedIndex,this.city.selectedIndex)
+                        }
+                        // 监听市的onchange事件
+                        city.onchange =()=>{
+                        this.updateArea(this.province.selectedIndex,this.city.selectedIndex)
+                        }
+                    }
+
+                }
+              cityPicker.init()
+    </script>
+</body>
+
+</html>

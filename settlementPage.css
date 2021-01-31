@@ -1,0 +1,349 @@
+body, html{
+    font-size: 12px;
+    color: #333;
+}
+*{
+    margin: 0;padding: 0;
+}
+li{list-style: none}
+a{
+    color: #333;
+    text-decoration: none}
+a:hover{
+    color: #f04848;
+}
+/* header区域顶部导航 */
+.page-head{
+    border-bottom: 1px solid #d5d5d5;
+    position: relative;
+}
+.top{
+    width: 100%;
+    height: 31px;
+    line-height: 31px;
+    background-color: #3e3e3e;
+    color: #bbb;
+    font-size: 12px;
+}
+.top a{
+    color: #bbb;
+    text-decoration: none;
+}
+.top span{
+    margin-right: 5px;
+}
+.type-area{
+    width: 1090px;
+    /* height: 31px; */
+    margin: 0 auto;
+}
+.leftbox{
+    float: left;
+}
+.rightbox{
+    float: right;
+}
+.rightbox a{
+    float: left;
+    margin-right: 10px;
+}
+
+/*header区域 中间部分 logo 搜索框 购物车 */
+.middle{
+    width:1090px;
+    height: 100px;
+    margin: 0 auto ;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 25%;
+    left: 0;
+}
+.serch{
+    width: 480px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -240px;
+    margin-top: -18px;
+    border: 1px solid #323534;
+    overflow: hidden;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.serch input{
+    display: block;
+    width: 100%;
+    height: 32px;
+    text-indent: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+}
+.serch .submit {
+    width: 32px;
+    height: 32px;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    color: #323534;
+    cursor: pointer;
+    border: 0;
+    background-color: #fff;
+    outline: 0;
+}
+.cart {
+    width: 110px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    margin-top: -18px;
+}
+.cart a {
+    display: block;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #f7f7f7;
+    text-decoration: none;
+}
+.cart a .iconfont {
+    font-size: 14px;
+    color: #f04848;
+    padding-right: 5px;
+}
+/* header部分下面的菜单导航区域 */
+.nav{
+    width: 1090px;
+    height: 40px;
+}
+.manue li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+    position: relative;
+}
+.manue a{
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.nav .all {
+    width: 160px;
+    padding: 0;
+    background-color: #f04848;
+}
+.all .iconfont {
+    font-size: 15px;
+    padding: 0 10px;
+
+}
+.nav .all a{
+    color: #fff;
+
+}
+.nav .hot{
+    display: block;
+    width: 29px;
+    height: 17px;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    background:url(images/hot.png) no-repeat 0 0;
+}
+/* 页面中间部分 */
+.order-layout {
+    width: 990px;
+    min-height: 1px;
+    margin: 40px auto;
+}
+.order-send {
+    border: 1px solid #d5d5d5;
+    border-top: 0;
+    padding: 25px 45px;
+    background: url(images/order-bg.png) -12px top repeat-x;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.red {
+    color: #f04848 !important;
+}
+ .table.table-order tbody tr th,  {
+    font-size: 14px;
+    padding: 8px 0;
+    font-size: 13px;
+    vertical-align: middle;
+}
+.input-order {
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    padding: 6px 0;
+    text-indent: 5px;
+    margin: 5px 0;
+}
+.select-order {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+.order-hr {
+    height: 1px;
+    overflow: hidden;
+    margin: 15px 0;
+    border-top: 1px dashed #ddd;
+}
+.delivery-time {
+    display: inline-block;
+    padding-left: 5px;
+}
+.delivery-time span {
+    position: relative;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #f04848;
+    padding: 0 12px;
+    background: url(images/checkout.gif) right bottom no-repeat;
+}
+.textarea-order {
+    border: 1px solid #ccc;
+    resize: none;
+    padding: 5px;
+}
+.copy-btn {
+    display: inline-block;
+    border: 1px solid #c8c7cc;
+    padding: 6px 12px 5px 12px;
+    margin-left: 5px;
+    background: #fff;
+}
+.btn.btn-red {
+    background-color: #f04848;
+    color: #fff;
+    font-size: 17px;
+    padding: 8px 35px;
+    border: 1px solid transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+.orange{
+    color: #f50;
+    margin-top: 10px;
+}
+.f16{
+    font-size: 16px;
+}
+/* 页面底部 */
+.page-footer {
+    height: 379px;
+    border-top: 1px solid #d5d5d5;
+}
+.bottom-odds {
+    /* display: block; */
+    width: 1090px;
+    height: 45px;
+    padding: 35px 0;
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+}
+.bottom-odds dl {
+    width: 208px;
+    height: 45px;
+    float: left;
+    /* display:block; */
+    vertical-align: middle;
+    text-align: center;
+}
+.bottom-odds dl dt .iconfont {
+    font-size: 25px;
+    color: #666;
+    border: 2px solid #d5d5d5;
+    padding: 5px;
+    border-radius: 100%;
+    float: left;
+}
+.bottom-odds dl dd strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+  
+}
+.bottom-odds dl dd p {
+    color: #666;
+    margin-top: 5px;
+    font-size: 13px;
+   
+}
+
+/* 关于我们部分 */
+.bottom-about{
+    display: inline-block;
+    width:1100px;
+    height: 122px;
+    padding: 25px 0;
+}
+.bottom-about-left{
+    width: 280px;
+    float: left;
+}
+.bottom-about-center{
+    width: 640px;
+    float: left;
+}
+.bottom-about-center dl{
+    width: 160px;
+    height: 122px;
+    float: left;
+}
+.bottom-about-center dl dt {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.bottom-about-center dl dd a {
+    display: block;
+    width: 120px;
+    height: 29px;
+    line-height: 29px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.bottom-about-right{
+    width: 150px;
+    float: left;
+}
+/* 页脚底部 */
+.bottom-copy {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 25px;
+    color: #c1c1c1;
+}
+.bottom-copy a{
+    color: #c1c1c1;
+}
